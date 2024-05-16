@@ -13,7 +13,6 @@ public class My3DTest2 extends InputHandler implements GameState
 {
     ArrayList<Polygon> polygons;
     PolygonRenderer    renderer;
-    //ZRenderer renderer;
     ViewWindow         window;
 
     public void init() 
@@ -21,7 +20,6 @@ public class My3DTest2 extends InputHandler implements GameState
         window           = new ViewWindow(0,0, Game.SCREEN_WIDTH, Game.SCREEN_HEIGHT, (float)Math.toRadians(75));
         Transform camera = new Transform(0, 100, 0);
         renderer         = new SolidPolygonRenderer(camera, window);
-        //renderer         = new ZRenderer(camera, window);
         polygons         = new ArrayList<>();
         createHouse(-200, 0,-1000);
         createHouse(-800, 50, -600);

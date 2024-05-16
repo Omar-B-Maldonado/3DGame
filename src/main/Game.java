@@ -30,7 +30,7 @@ public class Game extends InputHandler
 		statePanel = new GameStatePanel(SCREEN_WIDTH, SCREEN_HEIGHT);
 		add(statePanel);
 		
-		setCursorInvisible();
+		setCursorInvisible(true);
 
 		init();
 		startGame();

@@ -180,8 +180,9 @@ public class InputHandler extends JFrame implements KeyListener, MouseMotionList
 		lastMouseY   = mouseY;
 	}
 
-	public void setCursorInvisible()
+	public void setCursorInvisible(boolean bool)
 	{
+		if (bool == false) return;
 		BufferedImage cursor = new BufferedImage(16, 16, BufferedImage.TYPE_INT_ARGB);
 		Cursor blank = Toolkit.getDefaultToolkit().createCustomCursor(cursor, new Point(0,0), "blank");
 		setCursor(blank);

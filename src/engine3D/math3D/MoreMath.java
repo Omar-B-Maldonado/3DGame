@@ -28,4 +28,33 @@ public class MoreMath
         //use linear interpolation formula to find the corresponding x-coordinate.
         return Math.round(x1 + t * (x2 - x1));
     }
+
+   
+
+     /* Returns true if x is a power of 2 via bitwise AND.
+      * If x is a power of 2, it will have only one '1' bit.
+      * Then, x-1 would flip the '1', and all the bits to the right of it become '1'.
+      * --> if x is power of 2, it looks something like: 1000
+      * --> x-1 looks like 0111
+      * --> x & x-1 looks like bitwise AND betwween:
+      *         1000
+      *         0111
+      * --> ==  0000
+      */
+    public static boolean isPowerOfTwo(int x) 
+    {
+        return ((x & (x-1)) == 0);
+    }
+
+    /* Counts the number of "on" bits in an integer. */
+    public static int countbits(int x) 
+    {
+        int count = 0;
+        while (x > 0) 
+        {
+            count+=(x & 1); //inctrements if x's least significant bit is 1
+            x>>=1;          //shifts all bits to the right by 1 position (to check the next bit to the left)
+        }
+        return count;
+    }
 }

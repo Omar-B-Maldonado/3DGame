@@ -34,7 +34,7 @@ public class Vector
 		this.z += z;
 	}
 	
-	public void subtract(float x, float y, float z){ add(  -x,  -y,  -z); }
+	public void subtract(float x, float y, float z)   { add(  -x,  -y,  -z); }
 	
 	public void add     (Vector v) 			      	  { add( v.x, v.y, v.z); }
 	
@@ -162,5 +162,4 @@ public class Vector
 		rotateZ(xform.getCosAngleZ(), -xform.getSinAngleZ());
 		rotateX(xform.getCosAngleX(), -xform.getSinAngleX());
 	}
-	
 }
